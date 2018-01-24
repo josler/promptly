@@ -2,6 +2,7 @@
 
 require_relative './lib/cli'
 require_relative './lib/loop'
+require_relative './cp'
 require_relative './pr'
 require_relative './fixup'
 
@@ -10,6 +11,7 @@ class Promptly
     possible_commands = {
       "pr" => PR,
       "fixup" => Fixup,
+      "cp" => CP,
     }
 
     cli = CLI.new
