@@ -9,7 +9,7 @@ class Fixup
     end
 
     agree_push = cli.agree("Push to GH?")
-    do_push = lambda { system "git push" }
+    do_push = lambda { system "git push -f" }
 
     [
       agree_fixup,
