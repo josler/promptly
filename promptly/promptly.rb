@@ -1,17 +1,22 @@
 #!/usr/bin/ruby
 
+require 'dotenv'
 require_relative './lib/cli'
 require_relative './lib/loop'
 require_relative './cp'
 require_relative './pr'
 require_relative './fixup'
+require_relative './github_invite'
 
 class Promptly
   def self.run(args)
+    Dotenv.load(File.join(File.dirname(__FILE__), "../.env"))
+
     possible_commands = {
       "pr" => PR,
       "fixup" => Fixup,
       "cp" => CP,
+      "invite" => GithubInvite,
     }
 
     cli = CLI.new
