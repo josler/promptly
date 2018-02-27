@@ -1,14 +1,28 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    dotenv (2.2.1)
+    faraday (0.14.0)
+      multipart-post (>= 1.2, < 3)
     highline (1.7.10)
+    multipart-post (2.0.0)
+    octokit (4.8.0)
+      sawyer (~> 0.8.0, >= 0.5.3)
+    public_suffix (3.0.2)
+    sawyer (0.8.1)
+      addressable (>= 2.3.5, < 2.6)
+      faraday (~> 0.8, < 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bundler (~> 1.7)
+  dotenv
   highline
+  octokit (~> 4.0)
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
