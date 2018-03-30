@@ -20,7 +20,7 @@ class PR
     end
 
     agree_push = cli.agree("Push to GH?")
-    push = lambda { system "git push" }
+    push = lambda { system "git push -u" }
 
     agree_pr = cli.agree("Create PR?")
     pr_title = lambda do
